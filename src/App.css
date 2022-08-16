@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+:root {
+  --soft-red: #EC407A;
+  --soft-yellow: #fff587;
+  --grey-purple: #7d6b7d;
+  --soft-orange: #EE894D;
+  --light-green: #E6EE9C;
+  --grey: #c0baad;
+  --dark: #151524;
+  --light: #f6f6f6;
+  --bg: #fff3e0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::selection {
+  background: var(--soft-orange);
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::-webkit-scrollbar {
+  width: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  border-radius: 20px;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: aileron, sans-serif;
+  background-color: var(--bg);
+  color: var(--dark);
+  -webkit-text-size-adjust: none;
+  overflow-x: hidden;
+}
+
+button {
+  pointer-events: auto;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  display: inline-block;
+  user-select: none;
+}
+
+.wrapper {
+  padding: 2rem;
+  margin: auto;
+  max-width: 48rem;
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.title > div {
+  margin: auto 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+.completed {
+  text-decoration: line-through;
+  filter: opacity(40%);
+}
+
+/* sm */
+@media screen and (max-width: 640px) {
+  .wrapper {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .title {
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
   }
+  h1 {
+    margin: 0.4em;
+  }
+
+  p {
+    padding-top: 2rem;
+    margin: auto;
+  }
+}
+
+/* md */
+@media screen and (max-width: 768px) {
 }

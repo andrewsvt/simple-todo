@@ -1,0 +1,16 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  max-width: 48rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  ul {
+    max-width: 30rem;
+  }
+}

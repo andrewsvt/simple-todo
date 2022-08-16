@@ -1,0 +1,85 @@
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.left-box-title {
+  display: inherit;
+  align-items: flex-start;
+}
+
+.left-box-id {
+  display: inherit;
+  align-items: center;
+}
+
+.chackbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+} 
+
+.index {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0 1rem;
+  color: var(--grey);
+}
+
+.taskTitle {
+  padding-top: 0.4rem;
+  max-width: 70%;
+  line-height: 32px;
+}
+
+.button {
+  pointer-events: auto;
+  cursor: pointer;
+  color: var(--soft-red);
+  background: none;
+  border: none;
+  padding: 0 48px;
+  margin: 0;
+  font-family: inherit;
+  font-size: 34px;
+  line-height: 32px;
+  position: relative;
+  display: inline-block;
+}
+
+
+@media screen and (max-width: 640px) {
+  li {
+    margin: 1rem 2rem;
+    padding: 0;
+    font-size: 22px;
+  }
+
+  .left-box-title {
+    max-width: 70%;
+  }
+
+  .chackbox {
+    width: 2em;
+    height: 2em;
+  }
+
+  .index {
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0 4rem;
+  }
+
+  .taskTitle {
+    padding-top: 0;
+  }
+}
